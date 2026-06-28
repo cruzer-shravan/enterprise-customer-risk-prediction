@@ -1,0 +1,10 @@
+-r requirements.txt
+
+# Testing
+pytest
+httpx
+
+# Development
+jupyter
+notebook
+ipykernel

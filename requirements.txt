@@ -1,0 +1,37 @@
+# Core Data Science
+numpy==2.2.6
+pandas==2.3.2
+scipy
+
+# Data Visualization
+matplotlib
+
+# Machine Learning
+scikit-learn==1.8.0
+xgboost
+lightgbm
+catboost
+
+# Explainable AI (XAI)
+shap==0.48.0
+
+# Model Serialization & Data I/O
+joblib
+openpyxl
+
+# API & Backend
+fastapi==0.138.0
+uvicorn[standard]
+
+# Dashboard
+streamlit==1.58.0
+
+# MLOps & Experiment Tracking
+mlflow
+
+# Configuration Management
+python-dotenv
+PyYAML
+
+# PDF Generation
+reportlab

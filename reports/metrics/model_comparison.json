@@ -1,0 +1,222 @@
+{
+  "logistic_regression": {
+    "default_threshold": 0.5,
+    "default_metrics": {
+      "roc_auc": 0.8479681727763568,
+      "accuracy": 0.7444996451383961,
+      "precision": 0.5122377622377622,
+      "recall": 0.7834224598930482,
+      "f1": 0.6194503171247357,
+      "brier_score": 0.16476912915381148
+    },
+    "best_threshold": 0.6,
+    "tuned_metrics": {
+      "roc_auc": 0.8479681727763568,
+      "accuracy": 0.7743080198722498,
+      "precision": 0.5583333333333333,
+      "recall": 0.7165775401069518,
+      "f1": 0.6276346604215457,
+      "brier_score": 0.16476912915381148
+    }
+  },
+  "random_forest": {
+    "default_threshold": 0.5,
+    "default_metrics": {
+      "roc_auc": 0.8460758479940065,
+      "accuracy": 0.7906316536550745,
+      "precision": 0.6385964912280702,
+      "recall": 0.48663101604278075,
+      "f1": 0.5523520485584219,
+      "brier_score": 0.13719756919801276
+    },
+    "best_threshold": 0.3,
+    "tuned_metrics": {
+      "roc_auc": 0.8460758479940065,
+      "accuracy": 0.7714691270404542,
+      "precision": 0.548689138576779,
+      "recall": 0.7834224598930482,
+      "f1": 0.6453744493392071,
+      "brier_score": 0.13719756919801276
+    }
+  },
+  "extra_trees": {
+    "default_threshold": 0.5,
+    "default_metrics": {
+      "roc_auc": 0.8235462037252319,
+      "accuracy": 0.7892122072391767,
+      "precision": 0.6262295081967213,
+      "recall": 0.5106951871657754,
+      "f1": 0.5625920471281296,
+      "brier_score": 0.14767835344215757
+    },
+    "best_threshold": 0.25,
+    "tuned_metrics": {
+      "roc_auc": 0.8235462037252319,
+      "accuracy": 0.7246273953158269,
+      "precision": 0.488013698630137,
+      "recall": 0.7620320855614974,
+      "f1": 0.5949895615866388,
+      "brier_score": 0.14767835344215757
+    }
+  },
+  "gradient_boosting": {
+    "default_threshold": 0.5,
+    "default_metrics": {
+      "roc_auc": 0.8505825518613241,
+      "accuracy": 0.8005677785663591,
+      "precision": 0.6524590163934426,
+      "recall": 0.5320855614973262,
+      "f1": 0.5861561119293078,
+      "brier_score": 0.13523033004876978
+    },
+    "best_threshold": 0.35,
+    "tuned_metrics": {
+      "roc_auc": 0.8505825518613241,
+      "accuracy": 0.7771469127040455,
+      "precision": 0.5625,
+      "recall": 0.7219251336898396,
+      "f1": 0.6323185011709602,
+      "brier_score": 0.13523033004876978
+    }
+  },
+  "hist_gradient_boosting": {
+    "default_threshold": 0.5,
+    "default_metrics": {
+      "roc_auc": 0.8445296959363455,
+      "accuracy": 0.7920511000709723,
+      "precision": 0.6285714285714286,
+      "recall": 0.5294117647058824,
+      "f1": 0.5747460087082729,
+      "brier_score": 0.13892115790266302
+    },
+    "best_threshold": 0.2,
+    "tuned_metrics": {
+      "roc_auc": 0.8445296959363455,
+      "accuracy": 0.7324343506032647,
+      "precision": 0.4976228209191759,
+      "recall": 0.839572192513369,
+      "f1": 0.6248756218905472,
+      "brier_score": 0.13892115790266302
+    }
+  },
+  "adaboost": {
+    "default_threshold": 0.5,
+    "default_metrics": {
+      "roc_auc": 0.8386822186054923,
+      "accuracy": 0.78708303761533,
+      "precision": 0.7078651685393258,
+      "recall": 0.33689839572192515,
+      "f1": 0.45652173913043476,
+      "brier_score": 0.15649850853801844
+    },
+    "best_threshold": 0.45,
+    "tuned_metrics": {
+      "roc_auc": 0.8386822186054923,
+      "accuracy": 0.7885024840312278,
+      "precision": 0.5926829268292683,
+      "recall": 0.6497326203208557,
+      "f1": 0.6198979591836735,
+      "brier_score": 0.15649850853801844
+    }
+  },
+  "svc_rbf": {
+    "default_threshold": 0.5,
+    "default_metrics": {
+      "roc_auc": 0.836627140974967,
+      "accuracy": 0.78708303761533,
+      "precision": 0.5958549222797928,
+      "recall": 0.6149732620320856,
+      "f1": 0.6052631578947368,
+      "brier_score": 0.1409686677422566
+    },
+    "best_threshold": 0.35,
+    "tuned_metrics": {
+      "roc_auc": 0.836627140974967,
+      "accuracy": 0.7743080198722498,
+      "precision": 0.5553359683794467,
+      "recall": 0.7513368983957219,
+      "f1": 0.6386363636363637,
+      "brier_score": 0.1409686677422566
+    }
+  },
+  "mlp_neural_network": {
+    "default_threshold": 0.5,
+    "default_metrics": {
+      "roc_auc": 0.7920070267896355,
+      "accuracy": 0.7636621717530163,
+      "precision": 0.5543766578249337,
+      "recall": 0.5588235294117647,
+      "f1": 0.5565912117177098,
+      "brier_score": 0.1931574409314729
+    },
+    "best_threshold": 0.25,
+    "tuned_metrics": {
+      "roc_auc": 0.7920070267896355,
+      "accuracy": 0.7381121362668559,
+      "precision": 0.5052410901467506,
+      "recall": 0.6443850267379679,
+      "f1": 0.5663924794359577,
+      "brier_score": 0.1931574409314729
+    }
+  },
+  "xgboost": {
+    "default_threshold": 0.5,
+    "default_metrics": {
+      "roc_auc": 0.8502260456224651,
+      "accuracy": 0.794180269694819,
+      "precision": 0.6329113924050633,
+      "recall": 0.5347593582887701,
+      "f1": 0.5797101449275363,
+      "brier_score": 0.13541720047221142
+    },
+    "best_threshold": 0.35,
+    "tuned_metrics": {
+      "roc_auc": 0.8502260456224651,
+      "accuracy": 0.7743080198722498,
+      "precision": 0.558091286307054,
+      "recall": 0.7192513368983957,
+      "f1": 0.6285046728971962,
+      "brier_score": 0.13541720047221142
+    }
+  },
+  "lightgbm": {
+    "default_threshold": 0.5,
+    "default_metrics": {
+      "roc_auc": 0.8484538479423391,
+      "accuracy": 0.7750177430801988,
+      "precision": 0.5575757575757576,
+      "recall": 0.7379679144385026,
+      "f1": 0.6352128883774454,
+      "brier_score": 0.15175823324472335
+    },
+    "best_threshold": 0.5,
+    "tuned_metrics": {
+      "roc_auc": 0.8484538479423391,
+      "accuracy": 0.7750177430801988,
+      "precision": 0.5575757575757576,
+      "recall": 0.7379679144385026,
+      "f1": 0.6352128883774454,
+      "brier_score": 0.15175823324472335
+    }
+  },
+  "catboost": {
+    "default_threshold": 0.5,
+    "default_metrics": {
+      "roc_auc": 0.8519775762742516,
+      "accuracy": 0.7558552164655784,
+      "precision": 0.5266903914590747,
+      "recall": 0.7914438502673797,
+      "f1": 0.6324786324786325,
+      "brier_score": 0.15811014231399462
+    },
+    "best_threshold": 0.6,
+    "tuned_metrics": {
+      "roc_auc": 0.8519775762742516,
+      "accuracy": 0.7799858055358411,
+      "precision": 0.5680851063829787,
+      "recall": 0.713903743315508,
+      "f1": 0.6327014218009479,
+      "brier_score": 0.15811014231399462
+    }
+  }
+}

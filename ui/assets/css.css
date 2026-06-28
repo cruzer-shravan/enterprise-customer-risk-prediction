@@ -1,0 +1,31 @@
+.main {
+    padding-top: 1rem;
+}
+
+h1 {
+    color: #0F62FE;
+    font-weight: 700;
+}
+
+h2 {
+    color: #2D3748;
+}
+
+h3 {
+    color: #2D3748;
+}
+
+/* section[data-testid="stSidebar"] {
+    background-color: #F7F9FC;
+} */
+
+div[data-testid="metric-container"] {
+    background-color: white;
+    border: 1px solid #E5E7EB;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+footer {
+    visibility: hidden;
+}

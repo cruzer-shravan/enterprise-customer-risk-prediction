@@ -1,0 +1,15 @@
+{
+  "architecture_workflow": "reports/figures/lifecycle.png",
+  "data_flow_diagram": "reports/figures/data_flow_diagram.png",
+  "model_comparison": "reports/figures/model_comparison.png",
+  "confusion_matrix": "reports/figures/confusion_matrix.png",
+  "calibration_curve": "reports/figures/calibration_curve.png",
+  "roc_curve": "reports/figures/roc_curve.png",
+  "precision_recall_curve": "reports/figures/precision_recall_curve.png",
+  "feature_importance": "reports/figures/feature_importance.png",
+  "top_churn_risk_drivers": "reports/figures/top_churn_risk_drivers.png",
+  "churn_distribution": "reports/figures/churn_distribution.png",
+  "business_impact": "reports/figures/business_impact.png",
+  "shap_summary": "reports/figures/shap_summary.png",
+  "shap_waterfall": "reports/figures/shap_customer_0.png"
+}

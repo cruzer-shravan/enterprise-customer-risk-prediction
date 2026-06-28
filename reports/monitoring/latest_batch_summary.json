@@ -1,0 +1,261 @@
+{
+  "row_count": 50,
+  "numeric": {
+    "Latitude": {
+      "mean": 36.80185288,
+      "std": 2.29700739154995,
+      "missing_rate": 0.0
+    },
+    "Longitude": {
+      "mean": -120.15468360000001,
+      "std": 2.069660922652597,
+      "missing_rate": 0.0
+    },
+    "Tenure Months": {
+      "mean": 32.78,
+      "std": 25.98714297494051,
+      "missing_rate": 0.0
+    },
+    "Monthly Charges": {
+      "mean": 68.467,
+      "std": 27.867139447743828,
+      "missing_rate": 0.0
+    },
+    "Total Charges": {
+      "mean": 2456.765,
+      "std": 2287.79080875525,
+      "missing_rate": 0.0
+    },
+    "CLTV": {
+      "mean": 4715.5,
+      "std": 1143.4432080344,
+      "missing_rate": 0.0
+    }
+  },
+  "categorical": {
+    "Gender": {
+      "distribution": {
+        "Female": 0.56,
+        "Male": 0.44
+      },
+      "missing_rate": 0.0
+    },
+    "Senior Citizen": {
+      "distribution": {
+        "No": 0.78,
+        "Yes": 0.22
+      },
+      "missing_rate": 0.0
+    },
+    "Partner": {
+      "distribution": {
+        "No": 0.54,
+        "Yes": 0.46
+      },
+      "missing_rate": 0.0
+    },
+    "Dependents": {
+      "distribution": {
+        "No": 0.94,
+        "Yes": 0.06
+      },
+      "missing_rate": 0.0
+    },
+    "Phone Service": {
+      "distribution": {
+        "Yes": 0.92,
+        "No": 0.08
+      },
+      "missing_rate": 0.0
+    },
+    "Multiple Lines": {
+      "distribution": {
+        "No": 0.46,
+        "Yes": 0.46,
+        "No phone service": 0.08
+      },
+      "missing_rate": 0.0
+    },
+    "Internet Service": {
+      "distribution": {
+        "Fiber optic": 0.46,
+        "DSL": 0.38,
+        "No": 0.16
+      },
+      "missing_rate": 0.0
+    },
+    "Online Security": {
+      "distribution": {
+        "No": 0.64,
+        "Yes": 0.2,
+        "No internet service": 0.16
+      },
+      "missing_rate": 0.0
+    },
+    "Online Backup": {
+      "distribution": {
+        "Yes": 0.5,
+        "No": 0.34,
+        "No internet service": 0.16
+      },
+      "missing_rate": 0.0
+    },
+    "Device Protection": {
+      "distribution": {
+        "No": 0.46,
+        "Yes": 0.38,
+        "No internet service": 0.16
+      },
+      "missing_rate": 0.0
+    },
+    "Tech Support": {
+      "distribution": {
+        "No": 0.54,
+        "Yes": 0.3,
+        "No internet service": 0.16
+      },
+      "missing_rate": 0.0
+    },
+    "Streaming TV": {
+      "distribution": {
+        "No": 0.44,
+        "Yes": 0.4,
+        "No internet service": 0.16
+      },
+      "missing_rate": 0.0
+    },
+    "Streaming Movies": {
+      "distribution": {
+        "No": 0.44,
+        "Yes": 0.4,
+        "No internet service": 0.16
+      },
+      "missing_rate": 0.0
+    },
+    "Contract": {
+      "distribution": {
+        "Month-to-month": 0.62,
+        "Two year": 0.24,
+        "One year": 0.14
+      },
+      "missing_rate": 0.0
+    },
+    "Paperless Billing": {
+      "distribution": {
+        "Yes": 0.74,
+        "No": 0.26
+      },
+      "missing_rate": 0.0
+    },
+    "Payment Method": {
+      "distribution": {
+        "Electronic check": 0.36,
+        "Credit card (automatic)": 0.26,
+        "Bank transfer (automatic)": 0.22,
+        "Mailed check": 0.16
+      },
+      "missing_rate": 0.0
+    }
+  },
+  "prediction": {
+    "row_count": 50,
+    "average_churn_probability": 0.3367,
+    "risk_band_distribution": {
+      "Low": 0.64,
+      "High": 0.32,
+      "Medium": 0.04
+    }
+  },
+  "drift": {
+    "numeric_mean_shift": {
+      "Latitude": 0.2115,
+      "Longitude": -0.1649,
+      "Tenure Months": 0.0166,
+      "Monthly Charges": 0.1231,
+      "Total Charges": 0.0765,
+      "CLTV": 0.2665
+    },
+    "categorical_top_change": {
+      "Gender": {
+        "reference": "Male",
+        "batch": "Female",
+        "changed": true
+      },
+      "Senior Citizen": {
+        "reference": "No",
+        "batch": "No",
+        "changed": false
+      },
+      "Partner": {
+        "reference": "No",
+        "batch": "No",
+        "changed": false
+      },
+      "Dependents": {
+        "reference": "No",
+        "batch": "No",
+        "changed": false
+      },
+      "Phone Service": {
+        "reference": "Yes",
+        "batch": "Yes",
+        "changed": false
+      },
+      "Multiple Lines": {
+        "reference": "No",
+        "batch": "No",
+        "changed": false
+      },
+      "Internet Service": {
+        "reference": "Fiber optic",
+        "batch": "Fiber optic",
+        "changed": false
+      },
+      "Online Security": {
+        "reference": "No",
+        "batch": "No",
+        "changed": false
+      },
+      "Online Backup": {
+        "reference": "No",
+        "batch": "Yes",
+        "changed": true
+      },
+      "Device Protection": {
+        "reference": "No",
+        "batch": "No",
+        "changed": false
+      },
+      "Tech Support": {
+        "reference": "No",
+        "batch": "No",
+        "changed": false
+      },
+      "Streaming TV": {
+        "reference": "No",
+        "batch": "No",
+        "changed": false
+      },
+      "Streaming Movies": {
+        "reference": "No",
+        "batch": "No",
+        "changed": false
+      },
+      "Contract": {
+        "reference": "Month-to-month",
+        "batch": "Month-to-month",
+        "changed": false
+      },
+      "Paperless Billing": {
+        "reference": "Yes",
+        "batch": "Yes",
+        "changed": false
+      },
+      "Payment Method": {
+        "reference": "Electronic check",
+        "batch": "Electronic check",
+        "changed": false
+      }
+    }
+  }
+}

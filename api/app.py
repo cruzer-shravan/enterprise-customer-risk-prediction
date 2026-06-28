@@ -1,16 +1,10 @@
-# api/app.py
-
 from fastapi import FastAPI
-import joblib
+
+from api.routes.health import router as health_router
+from api.routes.model import router as model_router
+from api.routes.predict import router as predict_router
 
 app = FastAPI()
-model = joblib.load("models/model.pkl")
-
-@app.get("/")
-def home():
-    return {"message": "Churn Prediction API"}
-
-@app.post("/predict")
-def predict(data: dict):
-    # dummy logic
-    return {"prediction": "No"}
+app.include_router(health_router)
+app.include_router(model_router)
+app.include_router(predict_router)

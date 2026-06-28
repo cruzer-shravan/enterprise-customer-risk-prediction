@@ -1,0 +1,10 @@
+{
+  "labels": [
+    "No",
+    "Yes"
+  ],
+  "true_negative": 794,
+  "false_positive": 241,
+  "false_negative": 81,
+  "true_positive": 293
+}

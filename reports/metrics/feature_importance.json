@@ -1,0 +1,77 @@
+[
+  {
+    "feature": "Contract Type",
+    "importance": 0.126722,
+    "importance_percent": 12.67
+  },
+  {
+    "feature": "Customer Tenure (Months)",
+    "importance": 0.092936,
+    "importance_percent": 9.29
+  },
+  {
+    "feature": "Total Charges ($)",
+    "importance": 0.090463,
+    "importance_percent": 9.05
+  },
+  {
+    "feature": "Monthly Charges ($)",
+    "importance": 0.07578,
+    "importance_percent": 7.58
+  },
+  {
+    "feature": "Customer Lifetime Value",
+    "importance": 0.071363,
+    "importance_percent": 7.14
+  },
+  {
+    "feature": "Customer Latitude",
+    "importance": 0.067461,
+    "importance_percent": 6.75
+  },
+  {
+    "feature": "Customer Longitude",
+    "importance": 0.067221,
+    "importance_percent": 6.72
+  },
+  {
+    "feature": "Has Dependents",
+    "importance": 0.052514,
+    "importance_percent": 5.25
+  },
+  {
+    "feature": "Online Security Service",
+    "importance": 0.049356,
+    "importance_percent": 4.94
+  },
+  {
+    "feature": "Payment Method",
+    "importance": 0.04597,
+    "importance_percent": 4.6
+  },
+  {
+    "feature": "Internet Connection",
+    "importance": 0.039733,
+    "importance_percent": 3.97
+  },
+  {
+    "feature": "Technical Support",
+    "importance": 0.039441,
+    "importance_percent": 3.94
+  },
+  {
+    "feature": "Online Backup Service",
+    "importance": 0.024617,
+    "importance_percent": 2.46
+  },
+  {
+    "feature": "Gender",
+    "importance": 0.021763,
+    "importance_percent": 2.18
+  },
+  {
+    "feature": "Partner status",
+    "importance": 0.020294,
+    "importance_percent": 2.03
+  }
+]
