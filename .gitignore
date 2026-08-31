@@ -4,6 +4,7 @@
 venv311/
 venv/
 .venv/
+.venv-streamlit/
 
 # ==============================
 # Python Cache
