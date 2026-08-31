@@ -376,16 +376,6 @@ def render_scoring(metadata=None):
                 top_drivers,
             ) = score_batch(data_source)
 
-        # Temporary Debug Information
-
-        st.subheader("🔍 Debug Information")
-
-        st.write("Risk Band Distribution")
-        st.write(results["risk_band"].value_counts())
-
-        st.write("Top Risk Drivers")
-        st.write(top_drivers.value_counts())
-
         st.success(
             "✅ Prediction completed successfully."
         )

@@ -238,14 +238,10 @@ Monitoring & Reporting
     with col1:
         st.markdown("**Project**")
         st.markdown("**Developed by**")
-        st.markdown("**Course**")
-        st.markdown("**University**")
 
     with col2:
         st.write("Enterprise Customer Risk Prediction System")
         st.write("U. Shravan Kumar")
-        st.write("M.Sc. Data Science")
-        st.write("Symbiosis School for Online and Digital Learning (SSODL)")
 
     st.success(
     "Thank you for exploring the Enterprise Customer Risk Prediction System."
