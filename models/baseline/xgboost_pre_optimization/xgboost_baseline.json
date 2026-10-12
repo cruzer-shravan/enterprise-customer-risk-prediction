@@ -1,0 +1,16 @@
+﻿{
+  "baseline_name": "xgboost_pre_optimization",
+  "status": "frozen",
+  "model_name": "xgboost",
+  "deployment_model": "xgboost",
+  "decision_threshold": 0.35,
+  "metrics": {
+    "roc_auc": 0.8467,
+    "accuracy": 0.7672,
+    "precision": 0.5483,
+    "recall": 0.6979,
+    "f1_score": 0.6141
+  },
+  "optimization_status": "not_started",
+  "notes": "Metrics recorded from the successful training pipeline run before XGBoost hyperparameter optimization. Evaluation split to be verified."
+}
