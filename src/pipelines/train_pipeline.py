@@ -16,6 +16,7 @@ from src.config.settings import (
     RAW_DATA_PATH,
     REFERENCE_PROFILE_PATH,
     MODEL_SELECTION_TOLERANCE,
+    RANDOM_STATE                     # Added on 27 Sep 26
 )
 from src.data.load_data import load_data
 from src.data.split_data import split_data
@@ -32,8 +33,9 @@ from src.models.reporting import (
     save_training_figures,
 )
 from src.models.registry import save_model, save_versioned_model
-from src.models.train import get_model_candidates
+from src.models.train import get_model_candidates, tune_xgboost
 from src.monitoring.drift_detection import build_reference_profile, save_profile
+from sklearn.model_selection import train_test_split
 
 # ---------------------------------------------------------------------
 # Model selection preferences
@@ -227,23 +229,83 @@ def run_pipeline():
     X, y = build_features(df)
 
     X_train, X_test, y_train, y_test = split_data(X, y)
+    X_train, X_val, y_train, y_val = train_test_split(                              # Added on 27 Sep 26
+        X_train,
+        y_train,
+        test_size=0.20,
+        stratify=y_train,
+        random_state=RANDOM_STATE
+    )
+
 
     comparison = {}
     trained_models = {}
 
-    for model_name, model in get_model_candidates(X_train).items():
-        model.fit(X_train, y_train)
-        default_metrics = evaluate(model, X_test, y_test)
-        best_threshold, tuned_metrics = tune_threshold(model, X_test, y_test)
+    candidates = get_model_candidates(X_train)
+    xgboost_tuning_metadata = None
+
+    # Tune XGBoost using training data only.
+    # RandomizedSearchCV refits the best estimator on X_train.
+    if "xgboost" in candidates:
+        print("\n" + "=" * 70)
+        print("PHASE 1: XGBOOST HYPERPARAMETER OPTIMIZATION")
+        print("=" * 70)
+
+        tuned_xgboost, xgboost_tuning_metadata = tune_xgboost(
+            X_train,
+            y_train,
+            n_iter=30,
+            cv_splits=3,
+            n_jobs=-1,
+            verbose=1,
+        )
+
+        candidates["xgboost"] = tuned_xgboost
+
+    # Evaluate every candidate on the same validation set.
+    for model_name, model in candidates.items():
+        print(f"\nEvaluating model: {model_name}")
+
+        # The tuned XGBoost estimator is already fitted by RandomizedSearchCV.
+        # Other candidate models need to be fitted here.
+        if not (
+            model_name == "xgboost"
+            and xgboost_tuning_metadata is not None
+        ):
+            model.fit(X_train, y_train)
+
+        default_metrics = evaluate(model, X_val, y_val)
+
+        best_threshold, tuned_metrics = tune_threshold(
+            model,
+            X_val,
+            y_val,
+        )
 
         comparison[model_name] = {
             "default_threshold": 0.5,
             "default_metrics": default_metrics,
-            "best_threshold": best_threshold,
+            "best_threshold": float(best_threshold),
             "tuned_metrics": tuned_metrics,
         }
+
+        # Store optimization results alongside XGBoost comparison metrics.
+        if (
+            model_name == "xgboost"
+            and xgboost_tuning_metadata is not None
+        ):
+            comparison[model_name]["hyperparameter_optimization"] = (
+                xgboost_tuning_metadata
+            )
+
         trained_models[model_name] = model
-        log_to_mlflow(model_name, model, tuned_metrics, best_threshold)
+
+        log_to_mlflow(
+            model_name,
+            model,
+            tuned_metrics,
+            best_threshold,
+        )
 
     highest_f1_model_name, deployment_model_name = select_deployment_model(
     comparison, tolerance=MODEL_SELECTION_TOLERANCE,
@@ -251,8 +313,15 @@ def run_pipeline():
 
     best_model = trained_models[deployment_model_name]
     best_threshold = comparison[deployment_model_name]["best_threshold"]
+
+    # positive_probabilities needed for confusion matrix, business impact, SHAP related workflow, ROC/PR/calibration figures
     positive_probabilities = get_positive_probabilities(best_model, X_test)
     threshold_predictions = labels_from_threshold(positive_probabilities, best_threshold)
+
+    # final_test_metrics evaluates the locked configuration on the untouched test set (Part of experimental methodology)
+    final_test_metrics = evaluate(                                                  # Added on 27 Sep 26
+        best_model, X_test, y_test, threshold=best_threshold,
+    )
 
     metrics = {
         "highest_f1_model": highest_f1_model_name,
@@ -260,7 +329,7 @@ def run_pipeline():
         "selection_strategy": "Explainability-aware",
         "selection_tolerance": MODEL_SELECTION_TOLERANCE,
         "threshold": best_threshold,
-        **comparison[deployment_model_name]["tuned_metrics"],
+        **final_test_metrics,                                                   # changed after adding final_test_metrics above on 27 Sep 26
     }
 
     confusion_summary = confusion_matrix_report(y_test, threshold_predictions)
@@ -308,6 +377,7 @@ def run_pipeline():
                 # Dataset Information
                 "dataset_size": int(len(df)),
                 "train_size": int(len(X_train)),
+                "validation_size": int(len(X_val)),                                 # Added on 27 Sep 26
                 "test_size": int(len(X_test)),
                 "num_features": int(X.shape[1]),
 

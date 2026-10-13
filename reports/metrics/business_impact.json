@@ -8,81 +8,81 @@
     {
       "segment": "Top 10%",
       "customers": 141,
-      "churners": 103,
-      "churn_capture_rate": 0.2754,
-      "at_risk_cltv": 387511.0,
-      "cumulative_at_risk_cltv": 387511.0
+      "churners": 107,
+      "churn_capture_rate": 0.2861,
+      "at_risk_cltv": 410519.0,
+      "cumulative_at_risk_cltv": 410519.0
     },
     {
       "segment": "Top 20%",
       "customers": 141,
-      "churners": 78,
-      "churn_capture_rate": 0.484,
-      "at_risk_cltv": 321587.0,
-      "cumulative_at_risk_cltv": 709098.0
+      "churners": 87,
+      "churn_capture_rate": 0.5187,
+      "at_risk_cltv": 346497.0,
+      "cumulative_at_risk_cltv": 757016.0
     },
     {
       "segment": "Top 30%",
       "customers": 141,
-      "churners": 64,
-      "churn_capture_rate": 0.6551,
-      "at_risk_cltv": 260798.0,
-      "cumulative_at_risk_cltv": 969896.0
+      "churners": 60,
+      "churn_capture_rate": 0.6791,
+      "at_risk_cltv": 248442.0,
+      "cumulative_at_risk_cltv": 1005458.0
     },
     {
       "segment": "Top 40%",
       "customers": 141,
-      "churners": 59,
-      "churn_capture_rate": 0.8128,
-      "at_risk_cltv": 248986.0,
-      "cumulative_at_risk_cltv": 1218882.0
+      "churners": 38,
+      "churn_capture_rate": 0.7807,
+      "at_risk_cltv": 157267.0,
+      "cumulative_at_risk_cltv": 1162725.0
     },
     {
       "segment": "Top 50%",
       "customers": 141,
-      "churners": 27,
-      "churn_capture_rate": 0.885,
-      "at_risk_cltv": 126195.0,
-      "cumulative_at_risk_cltv": 1345077.0
+      "churners": 37,
+      "churn_capture_rate": 0.8797,
+      "at_risk_cltv": 171502.0,
+      "cumulative_at_risk_cltv": 1334227.0
     },
     {
       "segment": "Top 60%",
       "customers": 141,
-      "churners": 20,
-      "churn_capture_rate": 0.9385,
-      "at_risk_cltv": 80850.0,
-      "cumulative_at_risk_cltv": 1425927.0
+      "churners": 27,
+      "churn_capture_rate": 0.9519,
+      "at_risk_cltv": 119021.0,
+      "cumulative_at_risk_cltv": 1453248.0
     },
     {
       "segment": "Top 70%",
       "customers": 141,
-      "churners": 16,
-      "churn_capture_rate": 0.9813,
-      "at_risk_cltv": 70902.0,
-      "cumulative_at_risk_cltv": 1496829.0
+      "churners": 10,
+      "churn_capture_rate": 0.9786,
+      "at_risk_cltv": 37228.0,
+      "cumulative_at_risk_cltv": 1490476.0
     },
     {
       "segment": "Top 80%",
       "customers": 141,
-      "churners": 4,
-      "churn_capture_rate": 0.992,
-      "at_risk_cltv": 14533.0,
-      "cumulative_at_risk_cltv": 1511362.0
+      "churners": 6,
+      "churn_capture_rate": 0.9947,
+      "at_risk_cltv": 26284.0,
+      "cumulative_at_risk_cltv": 1516760.0
     },
     {
       "segment": "Top 90%",
       "customers": 141,
       "churners": 2,
-      "churn_capture_rate": 0.9973,
-      "at_risk_cltv": 10861.0,
-      "cumulative_at_risk_cltv": 1522223.0
+      "churn_capture_rate": 1.0,
+      "at_risk_cltv": 11160.0,
+      "cumulative_at_risk_cltv": 1527920.0
     },
     {
       "segment": "Top 100%",
       "customers": 140,
-      "churners": 1,
+      "churners": 0,
       "churn_capture_rate": 1.0,
-      "at_risk_cltv": 5697.0,
+      "at_risk_cltv": 0.0,
       "cumulative_at_risk_cltv": 1527920.0
     }
   ],
@@ -90,35 +90,35 @@
     {
       "target_rate": 0.1,
       "targeted_customers": 141,
-      "captured_churners": 103,
-      "churn_capture_rate": 0.2754,
-      "at_risk_cltv": 387511.0,
+      "captured_churners": 107,
+      "churn_capture_rate": 0.2861,
+      "at_risk_cltv": 410519.0,
       "retention_success_rate": 0.15,
-      "expected_saved_value": 58126.65,
+      "expected_saved_value": 61577.85,
       "campaign_cost": 1410.0,
-      "estimated_net_value": 56716.65
+      "estimated_net_value": 60167.85
     },
     {
       "target_rate": 0.2,
       "targeted_customers": 282,
-      "captured_churners": 181,
-      "churn_capture_rate": 0.484,
-      "at_risk_cltv": 709098.0,
+      "captured_churners": 194,
+      "churn_capture_rate": 0.5187,
+      "at_risk_cltv": 757016.0,
       "retention_success_rate": 0.15,
-      "expected_saved_value": 106364.7,
+      "expected_saved_value": 113552.4,
       "campaign_cost": 2820.0,
-      "estimated_net_value": 103544.7
+      "estimated_net_value": 110732.4
     },
     {
       "target_rate": 0.3,
       "targeted_customers": 423,
-      "captured_churners": 245,
-      "churn_capture_rate": 0.6551,
-      "at_risk_cltv": 969896.0,
+      "captured_churners": 254,
+      "churn_capture_rate": 0.6791,
+      "at_risk_cltv": 1005458.0,
       "retention_success_rate": 0.15,
-      "expected_saved_value": 145484.4,
+      "expected_saved_value": 150818.7,
       "campaign_cost": 4230.0,
-      "estimated_net_value": 141254.4
+      "estimated_net_value": 146588.7
     }
   ]
 }

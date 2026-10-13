@@ -3,8 +3,8 @@
     "No",
     "Yes"
   ],
-  "true_negative": 794,
-  "false_positive": 241,
-  "false_negative": 81,
-  "true_positive": 293
+  "true_negative": 821,
+  "false_positive": 214,
+  "false_negative": 99,
+  "true_positive": 275
 }
